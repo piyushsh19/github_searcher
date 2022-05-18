@@ -5,13 +5,14 @@
     </a>
     <div class="navbar-collapse">
         <div class="navbar-nav ml-auto">
-            <div *ngIf="email" routerLinkActive="active" class="navbar-text float-left">
-                {{email}}
-            </div>
+         
             <a [routerLink]="['/']"  *ngIf="email"routerLinkActive="active" class="'nav-item nav-link">Home</a>
             <a [routerLink]="['/signin']" routerLinkActive="active" *ngIf="!email" class="nav-item nav-link">SignIn</a>
             <a [routerLink]="['/signup']" routerLinkActive="active" *ngIf="!email" class="nav-item nav-link">SignUp</a>
-       <a *ngIf="email" (click) ="handleSignOut()" class="nav-item nav-link">Logout</a>
+            <div *ngIf="email" routerLinkActive="active" class="navbar-text float-left" style="margin-left: 1050px">
+               Logged User - {{email}}
+            </div>
+       <a *ngIf="email" (click) ="handleSignOut()" class="navbar-brand  lg-3 " style="margin-left:40px ">Logout</a>
         </div>
 
     </div>

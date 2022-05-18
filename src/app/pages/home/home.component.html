@@ -4,16 +4,20 @@
       (ngSubmit)="handleFind()"
     >
       <div class="form-group">
-        <label for="userName">User Name</label>
-        <input
+       
+        <div class="input-group mb-3">
+          <input
           [(ngModel)]="userName"
-          type="text"
           id="userName"
-          class="form-control mx-sm-3"
           name="userName"
-        />
+          type="text" class="form-control" placeholder="Enter Username" aria-label="" aria-describedby="basic-addon1">
+          <div class="input-group-prepend">
+            <button class="btn btn-primary" type="submit">Find user</button>
+          </div>
+        </div>
+       
       </div>
-      <button type="submit" class="btn btn-primary mb-2">Find User</button>
+    
     </form>
   
     <!-- to render error -->
